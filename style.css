@@ -1,0 +1,89 @@
+ul{
+  display: flex;
+  margin: auto;
+  list-style-type: none;
+  padding: 0;
+  overflow: hidden;
+  background-image: linear-gradient(orange, #0091ff);
+}
+h2{
+  text-align: center;
+  background-image: linear-gradient(#0bdada,#ffcccc);
+}
+@media screen and (max-width: 600px){
+
+ul{
+  list-style-type: none;
+  text-align: center;
+  flex-direction: column;
+  
+}
+}
+
+footer{
+  text-align: center;
+  background-image: linear-gradient(#0bdada,#ffcccc);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+li{
+  display: inline-block;
+  width: 10%;
+  padding: 20px;
+  font-size: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+li a{
+  text-decoration: none;
+}
+li a:hover{
+  background-image:linear-gradient(white, red);
+  padding: 10px;
+}
+#wrapper {
+  margin: 0px auto;
+  padding: 2px;
+  box-sizing: border-box;
+  background-color: #B2EBF2;
+}
+body {
+  background-color: #B2EBF2;
+}
+img:hover {
+  box-shadow: 10px 10px 10px #263238;
+  transform: scale(0.8, 0.8);
+}
+.gallery {
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  /*autofit as many cols as needed as you resize make one cell 100 px the fr fills as needed*/
+    grid-auto-rows: 100px;/*row ht*/
+    grid-auto-flow: dense;   /*change to row and see what happens*/
+}
+
+
+.gallery > div >img {   /*need this so the images are not warped*/  
+  /* don't need the >  can just leave a space*/
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  
+}
+
+
+.horizontal {
+    grid-column: span 2;   /*don't need to specify a start line whereever it is in the html list it spans 2 from there*/
+}
+
+.vertical {
+    grid-row: span 2;
+}
+.vertical4 {
+    grid-row: span 2;
+}
+.big {
+    grid-column: span 2;  
+    grid-row: span 2;
+}
